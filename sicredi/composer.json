@@ -24,6 +24,7 @@
     "require": {
         "php": "^7.3 || ^8.0",
         "ext-json": "*",
+        "akrabat/rka-content-type-renderer": "^2.0",
         "monolog/monolog": "^2.3",
         "php-di/php-di": "^6.3",
         "slim/psr7": "^1.4",

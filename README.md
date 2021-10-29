@@ -3,4 +3,4 @@ Integração com Sicredi PHP
 
 
 # Run Project
-php -S localhost:8000 -t public
+php -S localhost:8080 -t public public/index.php
