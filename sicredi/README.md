@@ -1,24 +1,42 @@
-# Lumen PHP Framework
+# Slim Framework 4 Skeleton Application
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://img.shields.io/packagist/dt/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://img.shields.io/packagist/v/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://img.shields.io/packagist/l/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
+[![Coverage Status](https://coveralls.io/repos/github/slimphp/Slim-Skeleton/badge.svg?branch=master)](https://coveralls.io/github/slimphp/Slim-Skeleton?branch=master)
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+Use this skeleton application to quickly setup and start working on a new Slim Framework 4 application. This application uses the latest Slim 4 with Slim PSR-7 implementation and PHP-DI container implementation. It also uses the Monolog logger.
 
-## Official Documentation
+This skeleton application was built for Composer. This makes setting up a new Slim Framework application quick and easy.
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
+## Install the Application
 
-## Contributing
+Run this command from the directory in which you want to install your new Slim Framework application. You will require PHP 7.3 or newer.
 
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+composer create-project slim/slim-skeleton [my-app-name]
+```
 
-## Security Vulnerabilities
+Replace `[my-app-name]` with the desired directory name for your new application. You'll want to:
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+* Point your virtual host document root to your new application's `public/` directory.
+* Ensure `logs/` is web writable.
 
-## License
+To run the application in development, you can run these commands 
 
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+cd [my-app-name]
+composer start
+```
+
+Or you can use `docker-compose` to run the app with `docker`, so you can run these commands:
+```bash
+cd [my-app-name]
+docker-compose up -d
+```
+After that, open `http://localhost:8080` in your browser.
+
+Run this command in the application directory to run the test suite
+
+```bash
+composer test
+```
+
+That's it! Now go build something cool.
