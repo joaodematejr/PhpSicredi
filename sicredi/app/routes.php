@@ -34,4 +34,11 @@ return function (App $app) {
         $response->getBody()->write($payload);
         return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
     });
+
+    $app->delete('/exemplo', function (Request $request, Response $response) {
+        $data = ['mensagem' => 'Deletado com Sucesso!'];
+        $payload = json_encode($data);
+        $response->getBody()->write($payload);
+        return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+    });
 };
